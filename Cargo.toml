@@ -1,7 +1,7 @@
 cargo-features = ["per-package-target", "edition2024"]
 
 [package]
-name = "enum-to-string"
+name = "og-enum-to-string"
 version = "0.0.1"
 edition = "2024"
 description = "Provides the `EnumToString` derive macro which implements the methods `as_str()` and `as_dbg()` to enums with no associated values"

@@ -1,4 +1,4 @@
-# enum-to-string
+# enum-to-string (O.G.)
 
 This crate provides the `EnumToString` derive macro.
 
