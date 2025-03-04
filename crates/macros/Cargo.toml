@@ -1,0 +1,27 @@
+cargo-features = ["per-package-target", "edition2024"]
+
+[package]
+name = "enum-to-string-macros"
+version = "0.0.1"
+edition = "2024"
+description = "Provides the `EnumToString` derive macro which implements the methods `as_str()` and `as_dbg()` to enums with no associated values"
+homepage = "https://github.com/gabrielfalcao/enum-to-string"
+license = "MIT"
+autobins = false
+autoexamples = false
+autobenches = false
+
+[package.metadata]
+cargo-args = ["-Zmtime-on-use", "-Zavoid-dev-deps", "-Zcustom_mir"]
+
+
+[dependencies]
+proc-macro2 = { version = "1.0.82", features = ["nightly", "span-locations"] }
+syn = { version = "2.0.60", features = ["full", "test"] }
+quote = "1.0.36"
+serde = "1.0.210"
+
+[lib]
+proc-macro = true
+name = "enum_to_string_macros"
+path = "src/lib.rs"

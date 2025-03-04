@@ -1,0 +1,18 @@
+cargo-features = ["per-package-target", "edition2024"]
+[package]
+name = "enum-to-string-traits"
+version = "0.0.1"
+edition = "2024"
+description = "Provides the `EnumToString` derive macro which implements the methods `as_str()` and `as_dbg()` to enums with no associated values"
+homepage = "https://github.com/gabrielfalcao/enum-to-string"
+license = "MIT"
+autobins = false
+autoexamples = false
+autobenches = false
+
+[package.metadata]
+cargo-args = ["-Zmtime-on-use", "-Zavoid-dev-deps", "-Zcustom_mir"]
+
+[lib]
+name = "enum_to_string_traits"
+path = "src/lib.rs"
